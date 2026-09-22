@@ -14,11 +14,24 @@
     </nav>
   </header>
 <main>
-<section class="homepage-intro" style="margin-top:0">
-<div><p class="eyebrow">PORTFOLIO</p><h1>Selected<br><em>work.</em></h1></div>
-<p class="intro-copy">Aviation photography featuring the Blue Angels, F-22 Raptors, Warbird Thunder Demo Team, and VFA-106 F/A-18E Super Hornets.</p>
+<section class="portfolio-header">
+  <div class="portfolio-title">
+    <p class="eyebrow">STEVE'S PHOTOGRAPHY · PORTFOLIO</p>
+    <h1>Selected<br><em>work.</em></h1>
+    <p class="portfolio-intro">A collection of military aviation, airshow, and warbird photography from across Virginia and beyond.</p>
+  </div>
+  <div class="portfolio-nav-wrap">
+    <p class="portfolio-nav-label">BROWSE BY SUBJECT</p>
+    <div class="portfolio-filters" role="tablist" aria-label="Filter portfolio by subject">
+      <button class="portfolio-filter active" data-filter="all" role="tab" aria-selected="true">All</button>
+      <button class="portfolio-filter" data-filter="blue-angels" role="tab" aria-selected="false">Blue Angels</button>
+      <button class="portfolio-filter" data-filter="f22" role="tab" aria-selected="false">F-22</button>
+      <button class="portfolio-filter" data-filter="warbirds" role="tab" aria-selected="false">Warbirds</button>
+      <button class="portfolio-filter" data-filter="fa18" role="tab" aria-selected="false">F/A-18</button>
+    </div>
+  </div>
 </section>
-    <section class="gallery-section" id="gallery">
+    <section class="gallery-section portfolio-gallery" id="gallery" data-category="blue-angels">
       <div class="section-heading">
         <div>
           <p class="eyebrow">01 / SELECTED WORK</p>
@@ -79,10 +92,10 @@
       </div>
     </section>
 
-    <section class="gallery-section gallery-secondary">
+    <section class="gallery-section gallery-secondary portfolio-gallery" data-category="f22">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">03 / SELECTED WORK</p>
+          <p class="eyebrow">02 / SELECTED WORK</p>
           <h2>F-22 <em>Raptor</em></h2>
         </div>
         <p>07 photographs</p>
@@ -134,7 +147,7 @@
       </div>
     </section>
 
-    <section class="gallery-section gallery-secondary">
+    <section class="gallery-section gallery-secondary portfolio-gallery" data-category="warbirds">
       <div class="section-heading">
         <div>
           <p class="eyebrow">04 / SELECTED WORK</p>
@@ -195,10 +208,10 @@
       </div>
     </section>
 
-    <section class="gallery-section gallery-secondary">
+    <section class="gallery-section gallery-secondary portfolio-gallery" data-category="fa18">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">05 / SELECTED WORK</p>
+          <p class="eyebrow">03 / SELECTED WORK</p>
           <h2>VFA-106 <em>F/A-18E</em></h2>
         </div>
         <p>04 photographs</p>
