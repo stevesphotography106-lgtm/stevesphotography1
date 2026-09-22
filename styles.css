@@ -116,3 +116,26 @@ footer { border-top:1px solid var(--line); padding:30px 5vw; display:flex; justi
   .subject-list span, .subject-list span:nth-child(3n+2), .subject-list span:nth-child(3n+3) { padding:17px 0; border-left:0; }
   .homepage-cta { padding-left:7vw; padding-right:7vw; }
 }
+
+
+/* Final spacing refinements */
+@media(min-width:801px) {
+  .site-header { padding-left:6vw; padding-right:6vw; }
+  .hero { padding-left:6vw; padding-right:6vw; }
+  .gallery-section { padding-left:6vw; padding-right:6vw; }
+  .section-heading { padding-left:1vw; padding-right:1vw; }
+  .photo-wide { min-height:480px; }
+  .photo-tall { min-height:560px; }
+  .photo { min-height:350px; }
+  .statement,.contact { padding-left:12vw; padding-right:12vw; }
+  .homepage-intro,.homepage-cta { padding-left:6vw; padding-right:6vw; }
+  .subject-strip { padding-left:12vw; padding-right:12vw; }
+}
+@media(max-width:800px) {
+  .site-header { padding-left:7vw; padding-right:7vw; }
+  .hero { padding-left:7vw; padding-right:7vw; }
+  .gallery-section { padding-left:6vw; padding-right:6vw; }
+  .section-heading { padding-left:1vw; padding-right:1vw; }
+  .statement,.contact { padding-left:9vw; padding-right:9vw; }
+  .homepage-intro,.homepage-cta { padding-left:7vw; padding-right:7vw; }
+}
