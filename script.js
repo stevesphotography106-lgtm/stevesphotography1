@@ -50,3 +50,22 @@ if (prevBtn) prevBtn.addEventListener('click',()=>showPhoto(current-1));
 if (nextBtn) nextBtn.addEventListener('click',()=>showPhoto(current+1));
 lightbox.addEventListener('click',e=>{ if(e.target===lightbox) closeLightbox(); });
 document.addEventListener('keydown',e=>{ if(!lightbox.classList.contains('open')) return; if(e.key==='Escape') closeLightbox(); if(e.key==='ArrowLeft') showPhoto(current-1); if(e.key==='ArrowRight') showPhoto(current+1); });
+
+
+// Portfolio category filters
+document.querySelectorAll('.portfolio-filter').forEach(button => {
+  button.addEventListener('click', () => {
+    const filter = button.dataset.filter;
+    document.querySelectorAll('.portfolio-filter').forEach(btn => {
+      const active = btn === button;
+      btn.classList.toggle('active', active);
+      btn.setAttribute('aria-selected', String(active));
+    });
+    document.querySelectorAll('.portfolio-gallery').forEach(section => {
+      const show = filter === 'all' || section.dataset.category === filter;
+      section.classList.toggle('is-hidden', !show);
+    });
+    const firstVisible = document.querySelector('.portfolio-gallery:not(.is-hidden)');
+    if (firstVisible) firstVisible.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+});
