@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The photography gear and editing setup used by Steve's Photography.">
+  <title>Gear | Steve's Photography</title>
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --panel: #12161b;
+      --panel-2: #171c22;
+      --text: #f3f5f7;
+      --muted: #aeb6c0;
+      --line: rgba(255,255,255,.10);
+      --accent: #dfe7ef;
+      --max: 1180px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(11,13,16,.96);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(10px);
+    }
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand {
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: .02em;
+      font-size: 1.05rem;
+    }
+    nav { display: flex; gap: 24px; flex-wrap: wrap; }
+    nav a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+    nav a:hover { color: var(--text); }
+    .hero {
+      padding: 100px 0 70px;
+      border-bottom: 1px solid var(--line);
+    }
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      color: var(--muted);
+      font-size: .76rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2.6rem, 7vw, 5.8rem);
+      line-height: .98;
+      margin: 0 0 22px;
+      letter-spacing: -.045em;
+    }
+    .hero p {
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin: 0;
+    }
+    .gear-section {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+      gap: 70px;
+      align-items: center;
+      padding: 90px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .gear-section.reverse .image { order: 2; }
+    .image {
+      min-height: 430px;
+      background: #f4f4f2;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      padding: 35px;
+      overflow: hidden;
+    }
+    .image img {
+      display: block;
+      width: 100%;
+      height: 430px;
+      object-fit: contain;
+    }
+    .lens-image img { height: 520px; }
+    .mac-image img { height: 400px; }
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.05;
+      margin: 0 0 18px;
+      letter-spacing: -.03em;
+    }
+    .model {
+      color: var(--muted);
+      margin-bottom: 25px;
+      font-size: 1rem;
+    }
+    .copy { color: #c8ced5; max-width: 590px; }
+    .specs {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 30px;
+    }
+    .spec {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 15px 16px;
+    }
+    .spec strong { display: block; font-size: 1rem; color: var(--text); }
+    .spec span { color: var(--muted); font-size: .84rem; }
+    .software {
+      padding: 90px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .software-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 35px;
+    }
+    .software-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 30px;
+    }
+    .software-card h3 { margin: 0 0 10px; font-size: 1.35rem; }
+    .software-card p { color: var(--muted); margin: 0; }
+    footer {
+      padding: 40px 0;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+    @media (max-width: 800px) {
+      .nav { align-items: flex-start; padding: 18px 0; flex-direction: column; }
+      nav { gap: 14px; }
+      .hero { padding: 70px 0 50px; }
+      .gear-section, .gear-section.reverse {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 60px 0;
+      }
+      .gear-section.reverse .image { order: 0; }
+      .image { min-height: 300px; padding: 22px; }
+      .image img { height: 300px; }
+      .lens-image img { height: 400px; }
+      .mac-image img { height: 290px; }
+      .software-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">Steve's Photography</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#gallery">Portfolio</a>
+      <a href="index.html#about">About</a>
+      <a href="gear.html" aria-current="page">Gear</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Steve's Photography</div>
+      <h1>My Gear</h1>
+      <p>The equipment behind my aviation photography, from capturing aircraft in the air to processing the final image.</p>
+    </div>
+  </section>
+
+  <section class="gear-section">
+    <div class="image">
+      <img src="assets/gear/nikon-d7100.jpg" alt="Nikon D7100 camera">
+    </div>
+    <div>
+      <h2>Nikon D7100</h2>
+      <div class="model">Primary camera body</div>
+      <p class="copy">My primary camera is the Nikon D7100. Its 24.1-megapixel DX-format sensor gives me useful resolution for cropping aircraft photographs, which is especially important when photographing subjects at a distance.</p>
+      <div class="specs">
+        <div class="spec"><strong>24.1 MP</strong><span>DX-format sensor</span></div>
+        <div class="spec"><strong>6,000 × 4,000</strong><span>Maximum image size</span></div>
+        <div class="spec"><strong>ISO 100–6400</strong><span>Expandable to ISO 25,600</span></div>
+        <div class="spec"><strong>Nikon F</strong><span>Lens mount</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gear-section reverse">
+    <div class="image lens-image">
+      <img src="assets/gear/nikkor-70-300mm.jpg" alt="Nikon AF-S VR Zoom-Nikkor 70-300mm f/4.5-5.6G IF-ED lens">
+    </div>
+    <div>
+      <h2>AF-S VR 70–300mm</h2>
+      <div class="model">AF-S VR Zoom-Nikkor 70–300mm f/4.5–5.6G IF-ED</div>
+      <p class="copy">My primary aviation lens is Nikon's 70–300mm VR telephoto zoom. On the D7100's DX-format sensor, its field of view is approximately equivalent to a 105–450mm lens on a 35mm-format camera, giving me the reach I need for aircraft photography.</p>
+      <div class="specs">
+        <div class="spec"><strong>70–300mm</strong><span>Focal-length range</span></div>
+        <div class="spec"><strong>f/4.5–5.6</strong><span>Maximum aperture</span></div>
+        <div class="spec"><strong>VR II</strong><span>Vibration Reduction</span></div>
+        <div class="spec"><strong>745 g</strong><span>Approx. weight</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gear-section">
+    <div class="image mac-image">
+      <img src="assets/gear/macbook-neo.jpg" alt="Apple MacBook Neo">
+    </div>
+    <div>
+      <h2>MacBook Neo</h2>
+      <div class="model">2026 editing and workflow computer</div>
+      <p class="copy">My MacBook Neo is the main computer I use for importing, organizing, editing, and preparing photographs for publication. It gives me a portable workflow for working with my aviation photography away from my desktop.</p>
+      <div class="specs">
+        <div class="spec"><strong>A18 Pro</strong><span>6-core CPU / 5-core GPU</span></div>
+        <div class="spec"><strong>13.0″</strong><span>Liquid Retina display</span></div>
+        <div class="spec"><strong>8 GB</strong><span>Unified memory</span></div>
+        <div class="spec"><strong>256 / 512 GB</strong><span>SSD storage options</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="software">
+    <div class="wrap">
+      <div class="eyebrow">Editing</div>
+      <h2>Software & Workflow</h2>
+      <div class="software-grid">
+        <article class="software-card">
+          <h3>Adobe Lightroom</h3>
+          <p>My primary editing software for RAW development, exposure and color adjustments, cropping, sharpening, noise reduction, and preparing photographs for social media and the web.</p>
+        </article>
+        <article class="software-card">
+          <h3>RAW Workflow</h3>
+          <p>I photograph in RAW when appropriate, then organize and develop the files in Lightroom before exporting finished photographs for the portfolio and social platforms.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Steve's Photography · Aviation Photography</div>
+</footer>
+</body>
+</html>
