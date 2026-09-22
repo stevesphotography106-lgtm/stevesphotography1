@@ -42,8 +42,11 @@ function showPhoto(index){
 function openLightbox(index){ showPhoto(index); lightbox.classList.add('open'); lightbox.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
 function closeLightbox(){ lightbox.classList.remove('open'); lightbox.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
 document.querySelectorAll('.photo').forEach(photo=>photo.addEventListener('click',()=>openLightbox(Number(photo.dataset.index))));
-document.getElementById('closeLightbox').addEventListener('click',closeLightbox);
-document.getElementById('prevPhoto').addEventListener('click',()=>showPhoto(current-1));
-document.getElementById('nextPhoto').addEventListener('click',()=>showPhoto(current+1));
+const closeBtn = document.getElementById('closeLightbox');
+const prevBtn = document.getElementById('prevPhoto');
+const nextBtn = document.getElementById('nextPhoto');
+if (closeBtn) closeBtn.addEventListener('click',closeLightbox);
+if (prevBtn) prevBtn.addEventListener('click',()=>showPhoto(current-1));
+if (nextBtn) nextBtn.addEventListener('click',()=>showPhoto(current+1));
 lightbox.addEventListener('click',e=>{ if(e.target===lightbox) closeLightbox(); });
 document.addEventListener('keydown',e=>{ if(!lightbox.classList.contains('open')) return; if(e.key==='Escape') closeLightbox(); if(e.key==='ArrowLeft') showPhoto(current-1); if(e.key==='ArrowRight') showPhoto(current+1); });
