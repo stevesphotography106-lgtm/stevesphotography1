@@ -26,10 +26,10 @@ const photos = [
   {src:'assets/DSC_6926.jpg', title:'VFA-106 F/A-18E — Underside Climb'},
   {src:'assets/DSC_7061.jpg', title:'VFA-106 F/A-18E — Pilot'},
   {src:'assets/DSC_7059.jpg', title:'VFA-106 F/A-18E — Cockpit'},
-  {src:'assets/DSC_6797.jpg', title:'OH-58D Kiowa Warrior — Overhead'},
-  {src:'assets/DSC_6795.jpg', title:'OH-58D Kiowa Warrior — Pass'},
-  {src:'assets/DSC_6790.jpg', title:'OH-58D Kiowa Warrior — Close Overhead'},
-  {src:'assets/DSC_6788.jpg', title:'OH-58D Kiowa Warrior — Climb'}
+  {src:'assets/DSC_6797.jpg', title:'UH-60M Black Hawk — Overhead'},
+  {src:'assets/DSC_6795.jpg', title:'UH-60M Black Hawk — Pass'},
+  {src:'assets/DSC_6790.jpg', title:'UH-60M Black Hawk — Close Overhead'},
+  {src:'assets/DSC_6788.jpg', title:'UH-60M Black Hawk — Climb'}
 ];
 const lightbox = document.getElementById('lightbox');
 const image = document.getElementById('lightboxImage');
